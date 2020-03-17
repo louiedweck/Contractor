@@ -10,18 +10,15 @@ class Meta:
 
 class Page(models.Model):
 
-    team_name = models.CharField(max_length=100)
-    help_text = "Write the name fo the team you're betting on"
+    team_name = models.CharField(max_length=100,
+                                 help_text="Write the name fo the team you're betting on")
 
     author = models.CharField(max_length=100)
 
-    wager = models.TextField()
-
-    instructions = models.TextField(
-        help_text="Write the instructions of your recipe")
+    wager = models.CharField()
 
     description = models.TextField(
-        help_text="Write the desciption of your recipe")
+        help_text="Explain why you wagered on this")
 
     created = models.DateTimeField(auto_now_add=True)
 
